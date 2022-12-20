@@ -18,6 +18,10 @@
 
 <script>
   export default {
-    props: ['messages']
+    props: ['messages'],
+    
+    mounted() {
+        console.log('Component mounted.')
+    }
   };
 </script>

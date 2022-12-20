@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChatController;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,5 +25,5 @@ Auth::routes();
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/', [ChatController::class,'index']);
-Route::get('messages', [ChatController::class,'fetchMessage']);
+Route::get('messages', [ChatController::class,'fetchMessages']);
 Route::post('messages', [ChatController::class,'sendMessage']);

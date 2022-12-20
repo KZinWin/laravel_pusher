@@ -14,6 +14,10 @@
     export default {
         props: ['user'],
 
+        mounted() {
+            console.log('Component mounted.')
+        },
+        
         data() {
             return {
                 newMessage: ''
